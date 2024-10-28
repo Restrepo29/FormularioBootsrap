@@ -48,7 +48,7 @@ function limpiarDatos() {
     // Limpiar todos los campos
     document.getElementById("nombre").value = "";
     document.getElementById("apellido").value = "";
-    document.getElementById("eps").selectedIndex = 0;
+    document.getElementById("epss").selectedIndex = 0;
     document.getElementById("edad").value = "";
     document.getElementById("masculino").checked =false;
     document.getElementById("femenino").checked = false;
