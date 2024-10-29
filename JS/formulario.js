@@ -49,7 +49,7 @@ function limpiarDatos() {
     document.getElementById("nombre").value = "";
     document.getElementById("apellido").value = "";
     document.getElementById("eps").selectedIndex = 0;
-    document.getElementById("edad").value = "";
+    document.getElementById("edadd").value = "";
     document.getElementById("masculino").checked =false;
     document.getElementById("femenino").checked = false;
     document.getElementById("suscripcion").checked = false;
