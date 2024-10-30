@@ -7,7 +7,6 @@ function procesa() {
   let genero = document.querySelector('input[name="genero"]:checked').value;
     let suscripcion = document.getElementById("suscripcion").checked ? "Sí" : "No";
 
-
  // Mostrar los valores procesados en el div de resultado
   document.getElementById("respuesta").innerText = 
   "Nombre: " + nombre + "\n" +
@@ -19,17 +18,11 @@ function procesa() {
   "Términos: " + suscripcion;
 }
 
-
-
-
 function procesarEdad(edad){
 
     if(edad>1 && edad<15){
-       
-        
-        return "primera infancia";
-
-       }if(edad>=15 && edad<45){
+       return "primera infancia";
+ }if(edad>=15 && edad<45){
         return "cotizante";
     } if(edad>=45 && edad<70){
         return "adulto mayor";
@@ -39,22 +32,16 @@ function procesarEdad(edad){
     }
 }
 
-
-
-console.log(procesarEdad(34))
-
 //funcion limpiar formulario
 function limpiarDatos() {
     // Limpiar todos los campos
     document.getElementById("nombre").value = "";
     document.getElementById("apellido").value = "";
-    document.getElementById("epss").selectedIndex = 0;
+    document.getElementById("eps").selectedIndex = 0;
     document.getElementById("edad").value = "";
     document.getElementById("masculino").checked =false;
     document.getElementById("femenino").checked = false;
     document.getElementById("suscripcion").checked = false;
-   
-
     // Limpiar el resultado mostrado
     document.getElementById("respuesta").innerText = "";
 }
