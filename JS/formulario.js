@@ -34,18 +34,18 @@ function procesarEdad(edad) {
     }
   }
 
-//funcion limpiar formulario
-function limpiarDatos() {
-  // Limpiar todos los campos
-  document.getElementById("nombre").value = "";
-  document.getElementById("apellido").value = "";
-  document.getElementById("eps").selectedIndex = 0;
-  document.getElementById("edad").value = "";
-  document.getElementById("masculino").checked = false;
-  document.getElementById("femenino").checked = false;
-  document.getElementById("suscripcion").checked = false;
-  // Limpiar el resultado mostrado
-  document.getElementById("respuesta").innerText = "";
 }
 
-}
+//funcion limpiar formulario
+function limpiarDatos() {
+    // Limpiar todos los campos
+    document.getElementById("nombre").value = "";
+    document.getElementById("apellido").value = "";
+    document.getElementById("eps").selectedIndex = 0;
+    document.getElementById("edad").value = "";
+    document.getElementById("masculino").checked = false;
+    document.getElementById("femenino").checked = false;
+    document.getElementById("suscripcion").checked = false;
+    // Limpiar el resultado mostrado
+    document.getElementById("respuesta").innerText = "";
+  }
