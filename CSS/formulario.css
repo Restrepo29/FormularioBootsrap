@@ -5,9 +5,8 @@
     width: 500px;
     height: 550px;
     margin: auto;
+    }
     
-    
-}
 h4,h3{
     text-align: center;
     color:cornflowerblue;
@@ -17,13 +16,4 @@ h4,h3{
 .resultado{
     text-align: center;
 }
-button{
-    background-color: cadetblue;
-    color: white;
-    font-size: 16px;}
 
-input{
-    border-radius: 3px;
-    border: 1px solid grey;
-    box-shadow: 2px solid blue;
-}
