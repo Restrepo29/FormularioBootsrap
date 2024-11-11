@@ -1,19 +1,27 @@
-.center{
+/* Centrar el formulario */
+.center {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Ajuste de la tabla */
+.table {
+    width: auto;
+    margin: 20px 50px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.table-container {
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid black;
-    width: 500px;
-    height: 550px;
-    margin: auto;
-    }
-    
-h4,h3{
-    text-align: center;
-    color:cornflowerblue;
-    padding-top: 30px;
 }
-
-.resultado{
-    text-align: center;
-}
-
