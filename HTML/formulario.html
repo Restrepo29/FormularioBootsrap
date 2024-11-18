@@ -8,46 +8,19 @@
     <link rel="stylesheet" href="../CSS/formulario.css">
 </head>
 <body>
-    <h3 class="h3 text-center">Formulario de Ejemplo</h3>
-    <form class="center">
-        <div>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ingresa nombre" class="form-control"><br>
-            
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" class="form-control"><br>
-            
-            <label for="eps">EPS:</label>
-            <select id="eps" name="eps" class="form-select">
-                <option value="saludTotal">Salud Total</option>
-                <option value="sanitas">Sanitas</option>
-                <option value="emsanar">Emsanar</option>
-                <option value="comfenalco">Comfenalco</option>
-            </select><br>
-            
-            <label for="edad">Edad:</label>
-            <input type="number" id="edad" name="edad" class="form-control"><br>
-            
-            <div class="form-check">
-                <label>Género:</label><br>
-                <input type="radio" class="form-check-input" id="masculino" name="genero" value="Masculino">
-                <label for="masculino" class="form-check-label">Masculino</label><br>
-                <input type="radio" class="form-check-input" id="femenino" name="genero" value="Femenino">
-                <label for="femenino" class="form-check-label">Femenino</label><br>
-            </div>
-            
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="suscripcion" name="suscripcion">
-                <label for="suscripcion">Acepto términos y condiciones:</label><br>
-            </div><br>
-            
-            <button type="button" onclick="crearUsuario()" class="btn btn-primary">Crear Usuario</button>  
-            <button type="button" onclick="limpiarDatos()" class="btn btn-danger">Limpiar</button>  
-            <button type="button" onclick="confirmarEdicion()" id="confirmarEdicionBtn" class="btn btn-success" disabled>Confirmar Edición</button>  
-        </div>
-    </form><br>
-    
-    <h4 class="h4 text-center">Usuarios Registrados:</h4>
+   
+<div class="container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">Ir Pagina Inicio</a>
+      </div>
+    </nav>
+  </div>
+    <h4 id="h4" class="h4 text-center">Usuarios Registrados:</h4>
+    <h4 class="h4 text-center">Buscar Usuario:</h4>
+  <div id="input">
+<input type="text" id="buscarInput" class="form-control" placeholder="Buscar por nombre o apellido..." oninput="filtrarUsuarios()"><br>
+</div>
     <div class="table-container">
         <table class="table table-striped">
             <thead>
@@ -58,7 +31,6 @@
                     <th>Edad</th>
                     <th>Género</th>
                     <th>Términos</th>
-                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody id="usuariosTabla">
@@ -67,6 +39,8 @@
         </table>
     </div>
 
-    <script src="../JS/formulario.js"></script> 
+    <script src="../JS/formulario2.js"></script> 
+   
+
 </body>
 </html>

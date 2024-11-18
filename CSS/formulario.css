@@ -6,6 +6,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
+    margin-top: 100px;
 }
 
 /* Ajuste de la tabla */
@@ -24,4 +25,13 @@
 .table-container {
     display: flex;
     justify-content: center;
+}
+
+#input{
+    width: 800px;
+    margin: auto;
+}
+
+#h4{
+    margin-top: 60px;
 }
