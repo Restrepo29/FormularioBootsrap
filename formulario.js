@@ -1,6 +1,23 @@
 const API_URL = "https://backend-1-bclm.onrender.com/usuarios";
 let usuarioSeleccionadoId = null;
 
+// Verificar disponibilidad del backend
+function verificarBackend() {
+  fetch(API_URL, { method: "HEAD" }) // HEAD solo verifica si el recurso está disponible
+    .then(function(response) {
+      if (response.ok) {
+        alert("Backend conectado");
+        obtenerUsuarios(); // Cargar usuarios si el backend está disponible
+      } else {
+        alert("Error: Backend no disponible");
+      }
+    })
+    .catch(function(error) {
+      alert("Error: No se pudo conectar con el backend");
+      console.error(error);
+    });
+}
+
 // Crear usuario
 function crearUsuario() {
   const usuario = obtenerDatosFormulario();
@@ -129,8 +146,25 @@ function confirmarEdicion() {
   }
 }
 
+// Filtrar usuarios
+function filtrarUsuarios() {
+  const textoBusqueda = document.getElementById("buscarInput").value.toLowerCase();
+  
+  fetch(API_URL)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(usuarios) {
+      const usuariosFiltrados = usuarios.filter(usuario => 
+        usuario.nombre.toLowerCase().includes(textoBusqueda) || 
+        usuario.apellido.toLowerCase().includes(textoBusqueda)
+      );
+      actualizarTabla(usuariosFiltrados);
+    });
+}
+
 // Cargar usuarios al inicio
-document.addEventListener("DOMContentLoaded", obtenerUsuarios);
+document.addEventListener("DOMContentLoaded", verificarBackend);
 
 // Función para limpiar el formulario
 function limpiarDatos() {
@@ -145,23 +179,4 @@ function limpiarDatos() {
   usuarioSeleccionadoId = null;
   document.getElementById("confirmarEdicionBtn").disabled = true;
 }
-function filtrarUsuarios() {
-  const textoBusqueda = document.getElementById("buscarInput").value.toLowerCase();  
-  // Obtener la lista de todos los usuarios y filtrarlos
-  
-    fetch(API_URL)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(usuarios) {
-      const usuariosFiltrados = usuarios.filter(usuario => 
-        usuario.nombre.toLowerCase().includes(textoBusqueda) || 
-        usuario.apellido.toLowerCase().includes(textoBusqueda)
-      );
-      actualizarTabla(usuariosFiltrados);
-    });
-  
 
-  }
-  
-    
