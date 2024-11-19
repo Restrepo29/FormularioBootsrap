@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/usuarios";
+const API_URL = "https://backend-1-bclm.onrender.com/usuarios";
 let usuarioSeleccionadoId = null;
 
 // Crear usuario
