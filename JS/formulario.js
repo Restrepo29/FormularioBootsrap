@@ -145,3 +145,23 @@ function limpiarDatos() {
   usuarioSeleccionadoId = null;
   document.getElementById("confirmarEdicionBtn").disabled = true;
 }
+function filtrarUsuarios() {
+  const textoBusqueda = document.getElementById("buscarInput").value.toLowerCase();  
+  // Obtener la lista de todos los usuarios y filtrarlos
+  
+    fetch(API_URL)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(usuarios) {
+      const usuariosFiltrados = usuarios.filter(usuario => 
+        usuario.nombre.toLowerCase().includes(textoBusqueda) || 
+        usuario.apellido.toLowerCase().includes(textoBusqueda)
+      );
+      actualizarTabla(usuariosFiltrados);
+    });
+  
+
+  }
+  
+    
